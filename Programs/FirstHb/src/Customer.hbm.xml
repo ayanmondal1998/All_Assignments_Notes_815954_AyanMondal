@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.hubberspot.hibernate.Customer" table="customer"
+  catalog="customerdb">
+  <id name="customerId" type="java.lang.Integer">
+   <column name="customerId"></column>
+   <generator class="identity"></generator>
+  </id>
+
+  <property name="customerName" type="java.lang.String">
+   <column name="customerName" length="50"></column>
+  </property>
+
+  <property name="customerEmail" type="java.lang.String">
+   <column name="customerEmail" length="60"></column>
+  </property>
+
+  <property name="customerPhone" type="java.lang.String">
+   <column name="customerPhone" length="15"></column>
+  </property>
+
+ </class>
+</hibernate-mapping>
